@@ -1,0 +1,229 @@
+@import "./variables.css";
+
+body {
+  background-color: var(--color-white-bis);
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  color: var(--color-gray-darker);
+
+  > header {
+    height: 77px;
+    background-color: white;
+    border-bottom: 1px solid var(--color-gray-lighter);
+
+    nav {
+      display: flex;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+    }
+
+    .logo-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-right: 1rem;
+    }
+
+    .logo-text {
+      width: 45%;
+      border-left: 1px solid var(--color-gray);
+      padding-left: 1rem;
+
+      img {
+        width: 100%;
+        margin-top: 7px;
+      }
+    }
+
+    .actions a:not(:first-of-type) {
+      padding-left: 1rem;
+    }
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+main.posts-page {
+  display: grid;
+  grid-template-areas: "posts";
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.container {
+  max-width: 935px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+.posts {
+  grid-area: posts;
+}
+
+.post {
+  border-radius: 3px;
+  background-color: white;
+  border: 1px solid var(--color-gray-lighter);
+
+  &:not(:first-of-type) {
+    margin-top: 15px;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 1rem;
+
+    nav {
+      display: flex;
+      align-items: center;
+
+      h4 {
+        margin-left: 0.5rem;
+      }
+    }
+
+    .photo {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+  }
+
+  .image {
+    display: flex;
+    align-items: center;
+    min-height: 500px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .details section {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+  }
+
+  .actions .action {
+    cursor: pointer;
+    display: inline;
+
+    .like,
+    .dislike {
+      display: inline;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .details {
+    .actions .action:not(:first-of-type) {
+      margin-left: 0.75rem;
+    }
+
+    .created-at {
+      color: var(--color-gray-dark);
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+  }
+}
+
+aside,
+footer {
+  display: none;
+}
+
+@media screen and (min-width: 700px) {
+  main.posts-page {
+    grid-template-columns: 600px auto;
+    grid-column-gap: 2rem;
+    grid-template-areas: "posts sidebar" "posts footer" "posts .";
+    margin-top: 60px;
+  }
+
+  .post:not(:first-of-type) {
+    margin-top: 60px;
+  }
+
+  aside {
+    grid-area: sidebar;
+    display: block;
+
+    .profile {
+      display: grid;
+      grid-template-columns: 50px auto;
+      grid-column-gap: 1rem;
+      grid-template-areas: "photo ." "photo username" "photo full-name" "photo .";
+      color: var(--color-gray-darker);
+      text-decoration: none;
+
+      .photo {
+        grid-area: photo;
+        width: 100%;
+        border-radius: 50%;
+        border: 1px solid var(--color-gray-light);
+        padding: 3px;
+      }
+
+      .username {
+        grid-area: username;
+      }
+
+      .full-name {
+        grid-area: full-name;
+        color: var(--color-gray-dark);
+        font-size: 14px;
+      }
+    }
+
+    .suggestions {
+      margin-top: 1rem;
+      padding: 0.75rem;
+      border-radius: 3px;
+      background-color: white;
+      border: 1px solid var(--color-gray-lighter);
+
+      h4 {
+        color: var(--color-gray-dark);
+        font-size: 14px;
+      }
+
+      .profile {
+        &:first-of-type {
+          margin-top: 1rem;
+        }
+
+        margin-top: 0.5rem;
+        grid-template-columns: 40px auto;
+      }
+
+      .photo {
+        padding: 0;
+      }
+    }
+  }
+
+  footer {
+    grid-area: footer;
+    display: block;
+    margin-top: 1rem;
+    color: var(--color-gray-light);
+    font-size: 14px;
+  }
+}

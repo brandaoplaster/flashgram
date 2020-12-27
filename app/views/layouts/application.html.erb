@@ -14,25 +14,24 @@
 
   <body>
 
-    <header>
+     <header>
       <div class="container">
         <nav>
           <div class="logo-icon">
-            <%= link_to 'icon', root_path %>
+            <%= link_to "icon", root_path %>
           </div>
 
           <div class="logo-text">
-            <%= link_to root_path %>
-              <%= image_tag 'logo.png' %>
+            <%= link_to root_path do %>
+              <%= image_tag "instagram.png" %>
             <% end %>
           </div>
         </nav>
 
-
         <nav class="actions">
           <%= link_to "+", new_post_path %>
-          <%= link_to "users", "#" %>
-        </div>
+          <%= link_to "user" %>
+        </nav>
       </div>
     </header>
 
