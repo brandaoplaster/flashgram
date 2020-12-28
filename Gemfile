@@ -11,6 +11,8 @@ gem 'webpacker', '~> 4.0'
 gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'rails-i18n'
+gem "devise", "~> 4.7"
+gem "devise-i18n", "~> 1.9"
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
