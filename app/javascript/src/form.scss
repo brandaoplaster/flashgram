@@ -1,0 +1,45 @@
+form {
+  .field {
+    margin-top: 1rem;
+
+    input {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: var(--color-white-bis);
+      border: 1px solid var(--color-gray-lighter);
+      border-radius: 3px;
+      font-size: 14px;
+
+      &:focus {
+        outline: 0;
+        border: 1px solid var(--color-gray-darker);
+      }
+    }
+  }
+
+  .actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+
+    input[type="submit"] {
+      font-size: 14px;
+      background-color: var(--color-blue);
+      color: white;
+      width: 100%;
+      border-radius: 4px;
+      border: none;
+      padding: 0.5rem;
+    }
+  }
+
+  &.new-post,
+  &.edit-profile {
+    margin: 1rem auto 0;
+    padding: 1rem;
+    max-width: 500px;
+    border-radius: 3px;
+    background-color: white;
+    border: 1px solid var(--color-gray-lighter);
+  }
+}

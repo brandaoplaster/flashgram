@@ -1,4 +1,11 @@
 @import "./variables.scss";
+@import "./form.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   background-color: var(--color-white-bis);
