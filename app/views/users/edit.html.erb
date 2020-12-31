@@ -1,0 +1,13 @@
+<main>
+  <%= form_with model: current_user, url: profile_path, local: true, class: "edit-profile" do |f| %>
+    <h1>Editar seu perfil</h1>
+
+    <div class="field">
+      <%= f.text_field :name, placeholder: "Name" %>
+    </div>
+
+    <div class="action">
+      <%= f.submit %>
+    </div>
+  <% end %>
+</main>

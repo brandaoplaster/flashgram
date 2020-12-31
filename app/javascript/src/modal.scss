@@ -1,0 +1,39 @@
+.modal {
+  display: none;
+}
+
+.flashgram-modal {
+  background: rgba(0, 0, 0, 0.6);
+
+  .tingle-modal-box {
+    width: auto;
+    margin: auto 1rem;
+    border-radius: 12px;
+  }
+
+  .tingle-modal-box__content {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .user-action {
+    padding: 1rem;
+    text-align: center;
+
+    &:not(:first-of-type) {
+      border-top: 1px solid var(--color-gray-lighter);
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--color-gray-darker);
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .instagram-modal .user-action {
+    padding: 1rem 8rem;
+  }
+}

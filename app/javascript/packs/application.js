@@ -17,3 +17,5 @@ require("@rails/actiontext")
 // const imagePath = (name) => images(name, true)
 
 import "../src/application.scss";
+
+import "./modal";
