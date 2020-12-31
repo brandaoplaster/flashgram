@@ -8,4 +8,7 @@ class User < ApplicationRecord
 
   validates :name, :username, presence: true
   validates :username, uniqueness: true
+
+  has_one_attached :avatar
+  validates :avatar, content_type: %i[png jpg jpeg]
 end
